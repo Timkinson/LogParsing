@@ -4,7 +4,6 @@ Created on Jul 17, 2015
 @author: Tim
 '''
 
-import re
 import json
 
 if __name__ == '__main__':
@@ -79,18 +78,8 @@ def ParseFile(fn):
 
 
      
-     
-        
-    
-    
-    
-    
-
 print('Total Lines in log file:', TotalLines('access_log'))
-
 #print(ParseOneLine('92-moc-6.acn.waw.pl - - [08/Mar/2004:08:37:14 -0800] "GET /twiki/pub/TWiki/TWikiLogos/twikiRobot46x50.gif HTTP/1.1" 304 -'))
-
-#print(ParseFile('access_log'))
 
 with open('log_parsed', 'w', encoding='utf8') as outfile:
     json.dump(ParseFile('access_log'), outfile, ensure_ascii=False)
